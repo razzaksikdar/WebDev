@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>addition</title>
+<style>
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+</style>
+
+</head>
+<body>
+<div>
+	
+<h1 style="text-align: center"> Calculator!</h1>
+<p > Please input 2 number for addition</p>
+<p> First Number</p>
+<input id="num1"><br>
+<p> Second Number</p>
+<input id="num2"> <br>
+<p> Third Number</p>
+<input id="num3"> <br><br>
+<button type="button" onclick="myFuntion()">Submit</button> 
+</div>
+
+<div>
+<p>Result:</p>
+<p id="demo"></p></div>
+
+<script type="text/javascript">
+	function myFuntion()
+	{
+     var x, y, z;
+     x=document.getElementById("num1").value;
+     y=document.getElementById("num2").value;
+     z=document.getElementById("num3").value;
+     var r=parseFloat(x)+parseFloat(y)+parseFloat(z);
+     document.getElementById("demo").innerHTML =r;
+
+	}
+
+</script>
+</body>
+</html>

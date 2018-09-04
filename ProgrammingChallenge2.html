@@ -1,0 +1,47 @@
+<!-- Functions
+	Create a function accepts a number and outputs its square
+	Create a function that accepts 3 numbers and returns the sum of them.
+	Create a Person object with three values, name, age, occupation.
+Output the contents of that object, then edit them, and output again.
+	Create a button that calls a function when clicked.
+	Create a button that increases the age of your Person object. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Chellenge 2</title>
+	<style>
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+</style>
+</head>
+<body>
+	<div>
+		//Create a function accepts a number and outputs its square
+ <p> Enter a number for square</p>
+ <input id="num1"> <br><br>
+ <button type="button" onclick="mySquare()">Submit</button>
+ 
+ <p>square output</p>
+ <p id="demo"></p>
+
+<script type="text/javascript">
+	
+		function mySquare()
+		{
+		 var x;
+         x=document.getElementById("num1").value;
+         var y=parseInt(x)*parseInt(x);
+         document.getElementById("demo").innerHTML =y;
+		}
+
+</script>
+</div>
+</body>
+</html>

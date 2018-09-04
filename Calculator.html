@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+    <style>
+
+    div {
+        background-color: lightgrey;
+        width: 300px;
+        border: 25px solid green;
+        padding: 25px;
+        margin: 25px;
+    }
+</style>
+
+</head>
+<body>
+    <div>
+
+        <h1 style="text-align: center"> Calculator!</h1>
+        <p > Please input 2 number for addition</p>
+        <p> First Number: </p>
+        <input id="num1">
+        <p> Second Number</p>
+        <input id="num2"> <br><br>
+
+        <button type="button" onclick="myAddition()">+</button> 
+        <button type="button" onclick="mySubtraction()">-</button> 
+        <button type="button" onclick="myMultiplication()">x</button> 
+        <button type="button" onclick="myDividation()">÷</button> 
+    </div>
+
+    <div>
+        <p>Result:</p>
+        <p id="demo"></p></div>
+
+        <script type="text/javascript">
+         function myAddition()
+         {
+             var x, y;
+             var r;
+             x=document.getElementById("num1").value;
+             y=document.getElementById("num2").value;
+
+             if (isNaN(x)||!x) {
+                r="First input is Not a number or Not Defined!!"
+            }
+            if (isNaN(y)||!y) {
+                r="Second input is Not a number or Not Defined!"
+            }
+            else 
+            {
+                var r=parseFloat(x)+parseFloat(y);
+            }
+            document.getElementById("demo").innerHTML =r;
+        }
+
+        function mySubtraction()
+        {
+                var x, y;
+                var r; 
+                 x=document.getElementById("num1").value;
+                 y=document.getElementById("num2").value;
+             if (isNaN(x)||!x) 
+                 {
+                r="First input is Not a number or Not Defined!!"
+                 }
+            if (isNaN(y)||!y) 
+                 {
+                r="Second input is Not a number or Not Defined!"
+                  }
+            else 
+                  {
+                var r=parseFloat(x)-parseFloat(y);
+                  }
+                document.getElementById("demo").innerHTML =r;
+        }
+
+        function myMultiplication()
+        {
+         var x, y;
+         var r;
+         x=document.getElementById("num1").value;
+         y=document.getElementById("num2").value;
+
+         if (isNaN(x)||!x) {
+            r="First input is Not a number or Not Defined!!"
+        }
+        if (isNaN(y)||!y) {
+            r="Second input is Not a number or Not Defined!"
+        }
+
+        else 
+        {
+            var r=parseFloat(x)*parseFloat(y);
+        }
+        document.getElementById("demo").innerHTML =r;
+        }
+
+        function myDividation()
+        {
+         var x, y;
+         x=document.getElementById("num1").value;
+         y=document.getElementById("num2").value;
+
+         if (isNaN(x)||!x) {
+            r="First input is Not a number or Not Defined!!"
+        }
+        if (isNaN(y)||!y) {
+            r="Second input is Not a number or Not Defined!"
+        }
+        else 
+        {
+            var r=parseFloat(x)/parseFloat(y);
+        }
+        document.getElementById("demo").innerHTML =r;
+        }
+
+</script>
+</body>
+</html>
